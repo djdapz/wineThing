@@ -124,6 +124,7 @@ var ToolController = function($scope) {
     };
 
 
+    $scope.isCollapsed = false;
 
 
 };

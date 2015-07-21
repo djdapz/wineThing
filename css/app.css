@@ -3,7 +3,7 @@
     margin: 20px 0;
     border: 1px solid #eee;
     border-left-width: 5px;
-    border-radius: 3px;
+    border-radius: 0px;
 }
 .bs-callout h4 {
     margin-top: 0;
@@ -13,7 +13,7 @@
     margin-bottom: 0;
 }
 .bs-callout code {
-    border-radius: 3px;
+    border-radius: 0px;
 }
 .bs-callout+.bs-callout {
     margin-top: -5px;

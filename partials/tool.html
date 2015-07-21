@@ -43,44 +43,62 @@
 
 
 
-        <div class="form-group bs-callout">
-            <form>
-
-                <h4>Wine Price Tool</h4>
-                <p> Instructions go here.</p>
 
 
+
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"> Wine Price Tool
+                    <span class="pull-right clickable"
+                          ng-click="isCollapsed = !isCollapsed">
+                        <i class="glyphicon"
+                           ng-class="{'glyphicon-chevron-down': isCollapsed, 'glyphicon-chevron-right': !isCollapsed}">
+                        </i>
+                        </span>
+                </h3>
+            </div>
+            <div class="panel-body" collapse="isCollapsed">
                 <div class="form-group">
-                    <label  class="col-sm-2 my-label">Price Per Bottle:</label>
-                    <div class="col-sm-9">
-                        <input class="form-control" ng-model="pricePerBottle" placeholder="Input Price per bottle in Euros" required >
-                    </div>
+                    <form>
+
+                        <div class="form-group" >
+
+                            <div class="col-sm-9">
+                                <input class="form-control" ng-model="pricePerBottle" placeholder="Price Per Bottle" required >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-sm-9">
+                                <select required class="form-control" ng-options="fee.cost as fee.range for fee in shippingVars" ng-model="shippingOption">
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-9">
+                                <button type="submit" class="btn btn-default" ng-click="calculatePrice()">
+                                    <span class="glyphicon glyphicon-glass"></span>Calculate</button>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </form>
                 </div>
 
-                <div class="form-group">
-                    <label class="col-sm-2 my-label">Shipping Option:</label>
-                    <div class="col-sm-9">
-                        <select required class="form-control" ng-options="fee.cost as fee.range for fee in shippingVars" ng-model="shippingOption">
-
-                        </select>
-
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-9">
-                        <button type="submit" class="btn btn-default" ng-click="calculatePrice()">
-                            <span class="glyphicon glyphicon-glass"></span>Calculate</button>
-                    </div>
-                </div>
-
-                <div class="clearfix"></div>
-            </form>
+            </div>
         </div>
 
 
 
-    <div>
+
+        <div>
         <div ng-show = "finalPrice.isSet" class="bs-callout bs-callout-success">
             <h4>Final Prices - Stateside </h4>
             <table class="table">
