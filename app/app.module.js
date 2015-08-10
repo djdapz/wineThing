@@ -4,10 +4,12 @@
 
 (function(angular) {
     angular.module("app.tool", []);
+    angular.module("app.settings", []);
 
 
     angular.module("app", ["ngRoute",
         "ngResource",
-        "app.tool"]);
+        "app.tool",
+        "app.settings"]);
 
 }(angular));

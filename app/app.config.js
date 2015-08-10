@@ -9,6 +9,9 @@
                 when('/tool', {
                     templateUrl: 'partials/tool.html',
                     controller: 'ToolController'}).
+                when('/settings', {
+                    templateUrl: 'partials/settings.html',
+                    controller: 'SettingsController'}).
                 otherwise({
                     redirectTo: '/tool'
                 });
