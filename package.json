@@ -10,7 +10,11 @@
     "gulp": "^3.9.0"
   },
   "devDependencies": {
-    "gulp-gh-pages": "^0.5.3"
+    "angular": "^1.4.7",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-gh-pages": "^0.5.3",
+    "gulp-inject": "^3.0.0",
+    "stream-series": "^0.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
