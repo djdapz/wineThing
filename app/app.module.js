@@ -7,7 +7,7 @@
     angular.module("app.settings", []);
 
 
-    angular.module("app", ["angular-route",
+    angular.module("app", ["ngRoute",
         "app.tool",
         "app.settings"]);
 
